@@ -1,16 +1,17 @@
 #!/bin/sh
 
-# easy Makefile
+# easy makefile
 echo '
 .PHONY: all clean_all
+
 all:
-      	make -C build all
+	make -C build all
 
 clean_all:
-      	rm -rf build; rm Makefile
+	rm -rf build; rm Makefile
 
 %:
-        make -C build $@
+	make -C build $@
 ' > Makefile
 
 # cleanup build dir if exist
