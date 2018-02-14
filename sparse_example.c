@@ -2,7 +2,7 @@
 #include "stdio.h"
 
 int
-main(int argc, char const *argv[])
+main(int argc, char *argv[])
 {
         char *f1 = sparse_flag("flag1", "FALSE", argc, argv);
         char *f2 = sparse_flag("flag2", "defaultval", argc, argv);
@@ -16,6 +16,7 @@ main(int argc, char const *argv[])
         printf("f3 = %s\n", f3);
         printf("f4 = %s\n", f4);
         printf("f5 = %s\n", f5);
+        printf("f6 = %s\n", f6);
 
         return 0;
 
