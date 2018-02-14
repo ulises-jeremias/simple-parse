@@ -1,6 +1,6 @@
 # simple-parse
 
-[![Build Status](https://travis-ci.org/ulises-jeremias/simple-parse.svg?branch=master)](https://travis-ci.org/ulises-jeremias/simple-parse)
+[![Build Status](https://travis-ci.org/ulises-jeremias/simple-parse.svg?branch=master)](https://travis-ci.org/ulises-jeremias/simple-parse) [![Build status](https://ci.appveyor.com/api/projects/status/mpc8xk0odl5er0lk/branch/master?svg=true)](https://ci.appveyor.com/project/ulises-jeremias/simple-parse/branch/master)
 
 Simple, stupid and portable C argument (argv) parser.
 
