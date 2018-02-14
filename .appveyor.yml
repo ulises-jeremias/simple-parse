@@ -5,6 +5,9 @@ os: Visual Studio 2015
 platform: x64
 configuration: Release
 
+build:
+  project: sparse.sln
+
 before_build:
     - echo Running cmake...
     - cd c:\projects\simple-parse
