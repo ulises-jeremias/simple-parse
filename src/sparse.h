@@ -45,7 +45,7 @@
 #ifdef PREDEF_STANDARD_C99
         #define __SPARSE_EXTERN_INLINE extern __SPARSE_INLINE
 #else
-        #define __SPARSE_EXTERN_INLINE static
+        #define __SPARSE_EXTERN_INLINE
 #endif
 
 #define FLAG_MAX_SIZE 80
