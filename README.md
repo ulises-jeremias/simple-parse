@@ -26,17 +26,16 @@ To handle the following program arguments:
 You could write this:
 
 ```c
-[...]
+#include <stdlib.h>
+#include <sparse.h>
 
 int main(int argc, char* argv[])
 {
-    char *f1 = sparse_flag("flag1", "FALSE", argc, argv);         // f1 = "TRUE"
-    char *f2 = sparse_flag("flag2", "defaultval", argc, argv);    // f2 = ""
-    char *f3 = sparse_flag("flag3", "bye", argc, argv);           // f3 = "hello"
-    char *f4 = sparse_flag("flag4", "Bye world", argc, argv);     // f4 = "Hello world"
-    char *f5 = sparse_flag("flag5", "default", argc, argv);       // f5 = "default"
-    char *f6 = sparse_flag("flag6", "FALSE", argc, argv);         // f6 = "FALSE"
-
-[...]
+    char *f1 = sparse_flag("flag1", "FALSE", argc, argv);         /* f1 = "TRUE" */
+    char *f2 = sparse_flag("flag2", "defaultval", argc, argv);    /* f2 = "" */
+    char *f3 = sparse_flag("flag3", "bye", argc, argv);           /* f3 = "hello" */
+    char *f4 = sparse_flag("flag4", "Bye world", argc, argv);     /* f4 = "Hello world" */
+    char *f5 = sparse_flag("flag5", "default", argc, argv);       /* f5 = "default" */
+    char *f6 = sparse_flag("flag6", "FALSE", argc, argv);         /* f6 = "FALSE" */
 }
 ```

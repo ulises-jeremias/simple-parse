@@ -3,46 +3,46 @@
 #include <sparse.h>
 
 
-char** SPARSE_allocated_args = NULL;
-int SPARSE_initialized = 0;
-int SPARSE_current_arg = 0;
+char** sparse_allocated_args = NULL;
+int sparse_initialized = 0;
+int sparse_current_arg = 0;
 
 
 __SPARSE_EXTERN_INLINE void
 sparse_cleanup()
 {
-        if (SPARSE_initialized == 0)
+        if (sparse_initialized == 0)
         {
                 return;
         }
 
-        if (SPARSE_current_arg == 0)
+        if (sparse_current_arg == 0)
         {
                 return;
         }
 
         int i;
-        for (i = 0; i < SPARSE_current_arg; i++)
+        for (i = 0; i <sparse_current_arg; i++)
         {
-                free(SPARSE_allocated_args[i]);
+                free(sparse_allocated_args[i]);
         }
 
-        free(SPARSE_allocated_args);
+        free(sparse_allocated_args);
 }
 
 
 __SPARSE_EXTERN_INLINE void
 sparse_init()
 {
-        if (SPARSE_initialized == 1)
+        if (sparse_initialized == 1)
         {
                 return;
         }
 
-        SPARSE_allocated_args = (char**) malloc(sizeof (char*) * FLAG_MAX_NUMBER);
-        SPARSE_current_arg = 0;
+        sparse_allocated_args = (char**) malloc(sizeof (char*) * FLAG_MAX_NUMBER);
+        sparse_current_arg = 0;
         atexit(&sparse_cleanup);
-        SPARSE_initialized = 1;
+        sparse_initialized = 1;
 }
 
 
@@ -132,8 +132,8 @@ sparse_flag(char *name, char *defaultValue, int argc, char **argv)
                 }
         }
 
-        SPARSE_allocated_args[SPARSE_current_arg] = content;
-        SPARSE_current_arg += 1;
+        sparse_allocated_args[sparse_current_arg] = content;
+        sparse_current_arg += 1;
 
         return content;
 }

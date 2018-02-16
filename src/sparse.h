@@ -1,39 +1,3 @@
-/**
- * @mainpage
- *
- * <a target="_blank" href="https://github.com/ulises-jeremias/simple-parse.git">See SPARSE on GitHub</a>.
- *
- * @section Usage
- * See the documentation for the sparse_flag() function.
- *
- * @section Example
- * To handle the following program arguments:
- * @code
- * ./myprog --flag1 --flag3= --flag4="Hello world"
- * @endcode
- *
- * You could write this:
- * @code
- *
- * [...]
- *
- * int main(int argc, char* argv[])
- * {
- *
- *     char* f1 = sparse_flag("flag1", "FALSE",      argc, argv); // f1 = "TRUE"
- *     char *f2 = sparse_flag("flag2", "FALSE",      argc, argv); // f2 = "FALSE"
- *     char *f3 = sparse_flag("flag3", "defaultval", argc, argv); // f3 = ""
- *     char *f4 = sparse_flag("flag4", "Bye world",  argc, argv); // f4 = "Hello world"
- *     char *f5 = sparse_flag("flag5", "Bye world",  argc, argv); // f5 = "Bye world"
- *     char *f5 = sparse_flag("flag5", NULL,  argc, argv); // f5 = NULL
- *
- * }
- * @endcode
- */
-
-/**
- * @file sparse.h
- */
 #ifndef SPARSE_H
 #define SPARSE_H
 
@@ -89,9 +53,9 @@
 
 __SPARSE_BEGIN_DECLS
 
-extern char** SPARSE_allocated_args;
-extern int SPARSE_initialized;
-extern int SPARSE_current_arg;
+extern char** sparse_allocated_args;
+extern int sparse_initialized;
+extern int sparse_current_arg;
 
 void sparse_cleanup();
 void sparse_init();
