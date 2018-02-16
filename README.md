@@ -37,5 +37,7 @@ int main(int argc, char* argv[])
     char *f4 = sparse_flag("flag4", "Bye world", argc, argv);     /* f4 = "Hello world" */
     char *f5 = sparse_flag("flag5", "default", argc, argv);       /* f5 = "default" */
     char *f6 = sparse_flag("flag6", "FALSE", argc, argv);         /* f6 = "FALSE" */
+
+    return 0;
 }
 ```
