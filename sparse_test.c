@@ -39,9 +39,6 @@ sparse_test(int argc, char** argv)
         TEST_VALUE = sparse_flag("val", "UNDEFINED", argc, argv);
         printf("type is %s %d\n", testType, strcmp(testType, "boolean"));
 
-        int diff;
-        char* result = NULL;
-
         if (strcmp(testType, "boolean") == 0)
         {
                 TEST_EXPECTED = "TRUE";
